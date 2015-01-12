@@ -1,0 +1,9 @@
+::	Delete AD users created by Create_AD_Users.bat
+:: 	2015/01/07	Oscar	
+
+
+for /l %%x in (1,1,9) do dsrm -noprompt -c "cn=ADtest000%%x,cn=users,dc=hopebaytech,dc=com"
+for /l %%x in (10,1,99) do dsrm -noprompt -c "cn=ADtest00%%x,cn=users,dc=hopebaytech,dc=com"
+for /l %%x in (100,1,999) do dsrm -noprompt -c "cn=ADtest0%%x,cn=users,dc=hopebaytech,dc=com"
+for /l %%x in (1000,1,6000) do dsrm -noprompt -c "cn=ADtest%%x,cn=users,dc=hopebaytech,dc=com"
+pause

@@ -1,0 +1,9 @@
+::	Create lots of AD users with ad.hopebaytech.com (10.10.100.65)
+:: 	reference \GoogleDrive\HB Shared Folder\QA Files\Tools\[AD tool]\Create AD User.bat
+:: 	2015/01/07	Oscar	
+
+for /l %%x in (1,1,9) do dsadd user "cn=ADtest000%%x,cn=users,dc=hopebaytech,dc=com" -display ADtest000%%x -disabled no -pwd "1q2w!Q@W" -pwdneverexpires yes
+for /l %%x in (10,1,99) do dsadd user "cn=ADtest00%%x,cn=users,dc=hopebaytech,dc=com" -display ADtest00%%x -disabled no -pwd "1q2w!Q@W" -pwdneverexpires yes
+for /l %%x in (100,1,999) do dsadd user "cn=ADtest0%%x,cn=users,dc=hopebaytech,dc=com" -display ADtest0%%x -disabled no -pwd "1q2w!Q@W" -pwdneverexpires yes
+for /l %%x in (1000,1,6000) do dsadd user "cn=ADtest%%x,cn=users,dc=hopebaytech,dc=com" -display ADtest%%x -disabled no -pwd "1q2w!Q@W" -pwdneverexpires yes
+pause
